@@ -128,6 +128,16 @@ A `GPUStraggler` node condition is also written to the status subresource with t
 
 Reason values: `latency_threshold_exceeded`, `high_variance`, `interconnect_degraded`, `pre_flight_failure`.
 
+## Evidence
+
+Two real-hardware runs are committed to this repo, generated on RunPod A100 SXM4 80GB instances on 2026-02-20:
+
+**`evidence.json`** — Node `221a215e1c25` (driver 580.126.09). Pre-flight detected 1001 uncorrectable aggregate ECC errors on GPU 0. All 10 runs quarantined without firing the GEMM pulse. This is the HBM row-remapping failure mode documented in the Meta post-mortem.
+
+**`evidence_computational_straggler.json`** — Node `21cc925acf9c` (driver 570.195.03). ECC clean, pre-flight passed. GEMM pulse fired; runs 1 and 2 returned CV=1.136 and CV=1.206 — 5–6× above the 0.20 threshold — on a node with a mean latency of 59 ms (well under the 100 ms A100 threshold). Textbook fail-slow: latency looks acceptable, variance exposes the fault.
+
+Both are raw JSON as emitted by the benchmark binary. No modifications.
+
 ## References
 
 - Falcon: [arXiv:2410.12588](https://arxiv.org/abs/2410.12588) — fail-slow GPU detection via iteration-time variance
