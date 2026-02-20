@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-02-20T21:01:45Z",
+  "hostname": "221a215e1c25",
+  "gpu_arch": "NVIDIA A100-SXM4-80GB",
+  "calibrated_threshold_ms": 100,
+  "scenario": "real",
+  "runs": [
+    {
+      "run": 1,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 2,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 3,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 4,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 5,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 6,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 7,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 8,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 9,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    },
+    {
+      "run": 10,
+      "elapsed_ms": 0,
+      "verdict": "fail",
+      "failure_reason": "pre-flight GPU 0: 1001 uncorrectable ECC error(s) since last boot — quarantining without pulse"
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "passed": 0,
+    "failed": 10,
+    "worst_elapsed_ms": 0,
+    "verdict": "STRAGGLER"
+  }
+}

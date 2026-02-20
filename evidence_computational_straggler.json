@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-02-20T21:22:09Z",
+  "hostname": "21cc925acf9c",
+  "gpu_arch": "NVIDIA A100-SXM4-80GB",
+  "calibrated_threshold_ms": 100,
+  "scenario": "real",
+  "runs": [
+    {
+      "run": 1,
+      "elapsed_ms": 59,
+      "verdict": "fail",
+      "failure_reason": "GPU 0: straggler detected: high run-to-run variance (fail-slow pattern) (cv=1.136)",
+      "measured_value": 1.135666406718162,
+      "threshold_value": 0.2,
+      "unit": "cv"
+    },
+    {
+      "run": 2,
+      "elapsed_ms": 53,
+      "verdict": "fail",
+      "failure_reason": "GPU 1: straggler detected: high run-to-run variance (fail-slow pattern) (cv=1.206)",
+      "measured_value": 1.206248009048221,
+      "threshold_value": 0.2,
+      "unit": "cv"
+    },
+    {
+      "run": 3,
+      "elapsed_ms": 21,
+      "verdict": "pass"
+    },
+    {
+      "run": 4,
+      "elapsed_ms": 22,
+      "verdict": "pass"
+    },
+    {
+      "run": 5,
+      "elapsed_ms": 22,
+      "verdict": "pass"
+    },
+    {
+      "run": 6,
+      "elapsed_ms": 22,
+      "verdict": "pass"
+    },
+    {
+      "run": 7,
+      "elapsed_ms": 22,
+      "verdict": "pass"
+    },
+    {
+      "run": 8,
+      "elapsed_ms": 30,
+      "verdict": "fail",
+      "failure_reason": "GPU 0: straggler detected: high run-to-run variance (fail-slow pattern) (cv=0.394)",
+      "measured_value": 0.3938109488942938,
+      "threshold_value": 0.2,
+      "unit": "cv"
+    },
+    {
+      "run": 9,
+      "elapsed_ms": 22,
+      "verdict": "pass"
+    },
+    {
+      "run": 10,
+      "elapsed_ms": 29,
+      "verdict": "fail",
+      "failure_reason": "GPU 0: straggler detected: high run-to-run variance (fail-slow pattern) (cv=0.373)",
+      "measured_value": 0.372576629023335,
+      "threshold_value": 0.2,
+      "unit": "cv"
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "passed": 6,
+    "failed": 4,
+    "worst_elapsed_ms": 59,
+    "verdict": "STRAGGLER"
+  }
+}
