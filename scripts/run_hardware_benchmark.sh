@@ -86,7 +86,7 @@ build_benchmark() {
     step "Compiling benchmark binary (-tags cuda)"
     cd "${REPO_ROOT}"
     CGO_CFLAGS="-I${REPO_ROOT}/cuda" \
-    CGO_LDFLAGS="-L${REPO_ROOT}/cuda -lgpupulse -lcudart -lstdc++ -Wl,-rpath,/usr/local/lib" \
+    CGO_LDFLAGS="-L${REPO_ROOT}/cuda -L/usr/local/cuda/lib64 -lgpupulse -lcudart -lstdc++ -Wl,-rpath,/usr/local/lib -Wl,-rpath,/usr/local/cuda/lib64" \
     go build \
         -tags cuda \
         -ldflags="-s -w" \
