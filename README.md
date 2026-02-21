@@ -128,6 +128,14 @@ A `GPUStraggler` node condition is also written to the status subresource with t
 
 Reason values: `latency_threshold_exceeded`, `high_variance`, `interconnect_degraded`, `pre_flight_failure`.
 
+## Context & Prior Art
+
+The failure modes mitigated by `straggler-shield` are actively impacting large-scale training clusters. For context on the community's ongoing efforts to handle these silent degradation and ECC gaps natively, see:
+
+- [NVIDIA/k8s-device-plugin #519: GPU health status exposure and remediation methods](https://github.com/NVIDIA/k8s-device-plugin/issues/519)
+- [NVIDIA/k8s-device-plugin #267: k8s-device-plugin seems to think gpu healthy when it is not usable due to Uncorrectable ECC Error](https://github.com/NVIDIA/k8s-device-plugin/issues/267)
+- [Falcon: A silent fail-slow straggler pattern](https://arxiv.org/abs/2410.12588)
+
 ## Evidence
 
 Two real-hardware runs are committed to this repo, generated on RunPod A100 SXM4 80GB instances on 2026-02-20:
